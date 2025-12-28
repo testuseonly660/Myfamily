@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Family Memories</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --accent: #d4a373; /* Earthy, warm tone */
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: white;
+        }
+        header h1 { font-weight: 300; letter-spacing: 2px; }
+        
+        /* The Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        
+        .card img, .card video {
+            width: 100%;
+            display: block;
+            border-bottom: 2px solid var(--bg-color);
+        }
+
+        .card-info { padding: 15px; }
+        .card-info h3 { margin: 0; font-size: 1.1rem; color: var(--accent); }
+        .card-info p { font-size: 0.9rem; color: #777; margin-top: 5px; }
+
+        @media (max-width: 600px) {
+            header { padding: 30px 10px; }
+            .gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Rami Family Archive</h1>
+    <p>Capturing the moments that matter most.</p>
+</header>
+
+<div class="gallery">
+    <div class="card">
+        <img src="https://i.postimg.cc/TYHy31RS/Whats-App-Image-2025-12-28-at-12-52-45-PM.jpg" alt="Kids playing">
+        <div class="card-info">
+            <h3>Ragavayya park</h3>
+            <p>June 2024 • The natural Stylish pose to camera!</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <video controls>
+            <source src="https://i.postimg.cc/tYWRrXnt/Whats-App-Image-2025-12-28-at-12-52-45-PM.jpg" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="card-info">
+            <h3>AArish's First Steps</h3>
+            <p>8th November 2023 • A moment we will never forget.</p>
+        </div>
+    </div>
+
+<div class="card">
+        <img src="https://i.postimg.cc/cCLQPzmg/aarish-naughty.jpg" alt="Kids">
+        <div class="card-info">
+            <h3>Visit to park</h3>
+            <p>Dec 2025 • chasing me!</p>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+</html>
