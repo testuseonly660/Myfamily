@@ -8,7 +8,7 @@
         :root {
             --bg-color: #f8f9fa;
             --text-color: #333;
-            --accent: #d4a373; /* Earthy, warm tone */
+            --accent: #d4a373; 
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,7 +24,6 @@
         }
         header h1 { font-weight: 300; letter-spacing: 2px; }
         
-        /* The Gallery Grid */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -43,10 +42,26 @@
         }
         .card:hover { transform: translateY(-5px); }
         
-        .card img, .card video {
+        .card img {
             width: 100%;
             display: block;
             border-bottom: 2px solid var(--bg-color);
+        }
+
+        /* Special container for YouTube Videos to keep them responsive */
+        .video-container {
+            position: relative;
+            padding-bottom: 177.77%; /* Vertical aspect ratio for Shorts (9:16) */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .card-info { padding: 15px; }
@@ -67,8 +82,9 @@
 </header>
 
 <div class="gallery">
+    
     <div class="card">
-        <img src="https://i.postimg.cc/TYHy31RS/Whats-App-Image-2025-12-28-at-12-52-45-PM.jpg" alt="Kids playing">
+        <img src="https://i.postimg.cc/TYHy31RS/Whats-App-Image-2025-12-28-at-12-52-45-PM.jpg" alt="Ragavayya park">
         <div class="card-info">
             <h3>Ragavayya park</h3>
             <p>June 2024 • The natural Stylish pose to camera!</p>
@@ -76,25 +92,24 @@
     </div>
 
     <div class="card">
-        <video controls>
-            <source src="https://i.postimg.cc/tYWRrXnt/Whats-App-Image-2025-12-28-at-12-52-45-PM.jpg" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/f2HdMiMnoto" allowfullscreen></iframe>
+        </div>
         <div class="card-info">
-            <h3>AArish's First Steps</h3>
-            <p>8th November 2023 • A moment we will never forget.</p>
+            <h3>AArish's 1st Steps</h3>
+            <p>Dec 2025 • Captured via YouTube Shorts!</p>
         </div>
     </div>
 
-<div class="card">
-        <img src="https://i.postimg.cc/cCLQPzmg/aarish-naughty.jpg" alt="Kids">
+    <div class="card">
+        <img src="https://i.postimg.cc/cCLQPzmg/aarish-naughty.jpg" alt="Visit to park">
         <div class="card-info">
             <h3>Visit to park</h3>
-            <p>Dec 2025 • chasing me!</p>
+            <p>Dec 2025 • Imitating me!</p>
         </div>
     </div>
 
-    </div>
+</div>
 
 </body>
 </html>
